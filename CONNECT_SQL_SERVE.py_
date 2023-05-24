@@ -1,0 +1,12 @@
+server = 'es103'
+db = 'DB_ECliente'
+user = 'sa-ecliente'
+pswd = '**************************'
+
+try:
+    cnxn = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server};SERVER='+server+';DATABASE='+db+';ENCRYPT=no;UID='+user+';PWD='+ pswd)
+    cursor = cnxn.cursor()
+    #self.cursor.execute(self._CREATE_TRIGGER_DATE_VALIDATION())
+    #print("Conexion exitosa")
+except Exception as ex:
+    print(ex)
