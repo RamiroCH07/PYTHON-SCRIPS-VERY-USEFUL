@@ -1,0 +1,4 @@
+with pd.ExcelWriter('TICKETS.xlsx') as writer:
+    df.to_excel(writer,sheet_name='TODOS_LOS_TICKETS',index = False)
+    df_tickets_g_mail.to_excel(writer,sheet_name='TICKETS_GENERADOS_POR_MAIL',index = False)
+    df_tickets_g_manual.to_excel(writer,sheet_name='TICKETS_GENERADOS_MANUALMENTE',index = False)
